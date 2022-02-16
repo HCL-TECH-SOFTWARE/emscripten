@@ -10,8 +10,10 @@ from pathlib import Path
 TAG = '2.11.1'
 HASH = '610f2377e28cfa4b40db6155bec02b911a93171f0b37efc7d544787468e3e8193c588a381b4743c2206ffee74ea6cdd42ed949f1d7c474e3b123900d23db69e0'
 
+
 def needed(settings):
   return settings.USE_FREETYPE
+
 
 def get(ports, settings, shared):
   ports.fetch_project('freetype', 'https://download.savannah.gnu.org/releases/freetype/freetype-' + TAG + '.tar.gz', 'freetype-' + TAG, sha512hash=HASH)
